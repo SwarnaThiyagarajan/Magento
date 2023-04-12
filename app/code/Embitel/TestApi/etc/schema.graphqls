@@ -1,0 +1,32 @@
+type Query {
+    customerDetails : customerDetailsOutput 
+    @resolver(class : "Embitel\\TestApi\\Model\\Resolver\\Customer") 
+    @doc(description: "Customer Details")
+}
+type customerDetailsOutput {
+    total_count : Int @doc(description: "Total No. of Customers"),
+    items : [customerDetail] @doc(description: "Customer Information")
+}
+type customerDetail {
+    firstname : String @doc(description: "Customer First Name"),
+    lastname : String @doc(description: "Customer Last Name"),
+    email : String @doc(description: "Customer Email"),
+    telephone : String @doc(description: "Customer Mobile Number"),
+    city : String @doc(description: "Customer City"),
+    state : String @doc(description: "Customer State"),
+    country : String @doc(description: "Customer Country")
+}
+
+type Mutation {
+    CustomerGroupData (input: customerGroupInput! 
+    @doc(description:"Input for Customer Group")): customerGroupOutput 
+    @resolver(class : "Embitel\\TestApi\\Model\\Resolver\\CustomerGroupData") 
+}
+input customerGroupInput {
+    customerTaxClassID : Int! @doc(description: "Customer Tax Class ID")
+    customerGroupCode : String! @doc(description : "Customer Group Code")
+}
+type customerGroupOutput {
+    customerGroupID : Int @doc(description: "Customer Group ID")
+    customerGroupCode : String @doc(description: "Customer Group Code")
+}

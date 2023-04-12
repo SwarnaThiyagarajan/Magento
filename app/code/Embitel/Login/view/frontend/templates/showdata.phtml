@@ -1,0 +1,73 @@
+<?php
+ $collection = $block->getCollection();
+if ($collection->count()) {
+?>
+<div class="table-wrapper orders-history">
+    <table class="data table table-order-items history" id="my-orders-table">
+        <tr>
+            <th><?php echo __('Employee ID') ?></th>
+            <th><?php echo __('First Name') ?></th>
+            <th><?php echo __('Last Name') ?></th>
+            <th><?php echo __('Email') ?></th>
+            <th><?php echo __('Mobile Number') ?></th>
+            <th><?php echo __('Company Name') ?></th>
+            <th><?php echo __('Department') ?></th>
+            <th><?php echo __('Occupation') ?></th>
+            <th><?php echo __('Address') ?></th>
+            <th><?php echo __('Joining Date') ?></th>
+            <th><?php echo __('Date of Birth') ?></th>
+            <th><?php echo __('Created At') ?></th>
+            <th><?php echo __('Updated At') ?></th>
+        </tr>
+        <tbody>
+        <?php
+ foreach ($collection as $item): ?>
+        <tr>
+            <td>
+                <?php echo $item->getemployee_id() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_first_name() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_last_name() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_email() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_mobile_number() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_company_name() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_department() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_occupation() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_address() ?>
+            </td>
+           
+            <td>
+                <?php echo $item->getemployee_joining_date() ?>
+            </td>
+            <td>
+                <?php echo $item->getemployee_date_of_birth() ?>
+            </td>
+            <td>
+                <?php echo $item->getcreated_at() ?>
+            </td>
+            <td>
+                <?php echo $item->getupdated_at() ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+ }
+ ?>

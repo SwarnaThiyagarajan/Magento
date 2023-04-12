@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!--Rest API for displaying static data-->
+    <route url="/V1/display/customer" method="GET">
+    <service class="Embitel\TestApi\Api\DisplayCustomerInterface" method="getCustomerData" />
+    <resources>
+        <resource ref="anonymous"/>
+    </resources>
+    </route>
+
+    <!--Rest API for inserting data to customer group-->
+    <route url="/V1/post/customergroup" method="POST">
+    <service class="Embitel\TestApi\Api\DisplayCustomerInterface" method="createCustomerGroupData" />
+    <resources>
+        <resource ref="anonymous"/>
+    </resources>
+    </route>
+</routes>
