@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="employee">
+        <column xsi:type="int" name="entity_id" padding="20" extra="auto_increment" identity="true" nullable="false" comment="ID" />
+        <column xsi:type="varchar" name="employee_id" length="25" identity="true" nullable="false" comment="Employee ID" />
+        <column xsi:type="varchar" name="employee_first_name" length="100" nullable="false" comment="Employee First Name" />
+        <column xsi:type="varchar" name="employee_last_name" length="100" nullable="false" comment="Employee Last Name" />
+        <column xsi:type="varchar" name="employee_email" length="100" nullable="false" comment="Employee Email ID" />
+        <column xsi:type="bigint" name="employee_mobile_number" nullable="false" comment="Employee Mobile Number" />
+        <column xsi:type="varchar" name="employee_company_name" length="100" nullable="false" comment="Employee Company Name" />
+        <column xsi:type="varchar" name="employee_department" length="100" nullable="false" comment="Employee Department" />
+        <column xsi:type="varchar" name="employee_occupation" length="100" nullable="false" comment="Employee Department" />
+        <column xsi:type="text" name="employee_address" nullable="false" comment="Employee Address" />
+        <column xsi:type="date" name="employee_joining_date" nullable="false" comment="Employee Joining Date" />
+        <column xsi:type="date" name="employee_date_of_birth" nullable="false" comment="Employee Date of Birth" />
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created Date and Time"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="true" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated Date and Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id" />
+        </constraint>
+    </table>
+</schema>

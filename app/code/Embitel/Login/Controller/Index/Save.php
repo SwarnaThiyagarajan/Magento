@@ -47,7 +47,7 @@ class Save extends \Magento\Framework\App\Action\Action
         }
     
         $resultRedirect =  $this->resultRedirectFactory->Create();
-        $resultRedirect->setPath('login/index/index');
+        $resultRedirect->setPath('login/index/showdata');
         return $resultRedirect;
     }
 }

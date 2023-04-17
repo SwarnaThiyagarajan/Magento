@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Embitel_UiComponent::uicomponent" title="Form" translate="title" module="Embitel_UiComponent" 
+        resource="Embitel_UiComponent::uicomponent" action="form/employee"
+        sortOrder="10"/>
+    </menu>
+</config>

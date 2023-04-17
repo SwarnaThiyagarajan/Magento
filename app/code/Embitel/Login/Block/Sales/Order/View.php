@@ -1,5 +1,5 @@
 <?php
-namespace Embitel\Login\Sales\Block\Order\View;
+namespace Embitel\Login\Block\Sales\Order\View;
 /**
  * View Class
  */

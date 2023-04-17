@@ -1,5 +1,5 @@
 <?php
-namespace Embitel\Login\Sales\Model\Order;
+namespace Embitel\Login\Block\Sales\Model\Order;
 /**
  * Order Class
  */
